@@ -148,6 +148,24 @@ resource "github_repository" "cqrs" {
   has_wiki      = false
   has_downloads = false
 }
+resource "github_repository" "cqrs_bundle" {
+  name          = "cqrs-bundle"
+  description   = "[read-only] Symfony CQRS Bundle"
+  homepage_url  = "https://docs.sonsofphp.com/components/cqrs"
+  topics        = [
+    "sonsofphp",
+    "cqrs",
+    "php",
+    "symfony",
+    "symfony-bundle",
+  ]
+
+  visibility    = "public"
+  has_issues    = false
+  has_projects  = false
+  has_wiki      = false
+  has_downloads = false
+}
 resource "github_repository" "cqrs_symfony" {
   name          = "cqrs-symfony"
   description   = "[read-only] Adds additional functionality to the sonsofphp/cqrs package"
