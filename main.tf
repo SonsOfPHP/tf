@@ -1,4 +1,12 @@
 terraform {
+  cloud {
+    organization = "SonsOfPHP"
+
+    workspaces {
+      name = "gh-actions"
+    }
+  }
+
   required_providers {
     github = {
       source  = "integrations/github"
@@ -55,7 +63,7 @@ resource "github_repository" "sonsofphp" {
   name         = "sonsofphp"
   description  = "Mother Repository - All Development is done here"
   homepage_url = "https://docs.sonsofphp.com"
-  topics       = [
+  topics = [
     "bard-php",
     "clock",
     "cqrs",
@@ -103,7 +111,7 @@ resource "github_repository" "bard" {
   has_projects  = false
   has_wiki      = false
   has_downloads = false
-  topics        = [
+  topics = [
     "bard-php",
     "monorepo",
     "php",
@@ -111,10 +119,10 @@ resource "github_repository" "bard" {
   ]
 }
 resource "github_repository" "clock" {
-  name          = "clock"
-  description   = "[read-only] Lightweight clock implementation to abstract away using PHP's DateTime objects"
-  homepage_url  = "https://docs.sonsofphp.com/components/clock"
-  topics        = [
+  name         = "clock"
+  description  = "[read-only] Lightweight clock implementation to abstract away using PHP's DateTime objects"
+  homepage_url = "https://docs.sonsofphp.com/components/clock"
+  topics = [
     "clock",
     "date",
     "datetime",
@@ -132,10 +140,10 @@ resource "github_repository" "clock" {
   has_downloads = false
 }
 resource "github_repository" "cqrs" {
-  name          = "cqrs"
-  description   = "[read-only] CQRS to help get you up and running quickly"
-  homepage_url  = "https://docs.sonsofphp.com/components/cqrs"
-  topics        = [
+  name         = "cqrs"
+  description  = "[read-only] CQRS to help get you up and running quickly"
+  homepage_url = "https://docs.sonsofphp.com/components/cqrs"
+  topics = [
     "command-query-response-segregation",
     "cqrs",
     "php",
@@ -149,10 +157,10 @@ resource "github_repository" "cqrs" {
   has_downloads = false
 }
 resource "github_repository" "cqrs_bundle" {
-  name          = "cqrs-bundle"
-  description   = "[read-only] Symfony CQRS Bundle"
-  homepage_url  = "https://docs.sonsofphp.com/components/cqrs"
-  topics        = [
+  name         = "cqrs-bundle"
+  description  = "[read-only] Symfony CQRS Bundle"
+  homepage_url = "https://docs.sonsofphp.com/components/cqrs"
+  topics = [
     "sonsofphp",
     "cqrs",
     "php",
@@ -167,10 +175,10 @@ resource "github_repository" "cqrs_bundle" {
   has_downloads = false
 }
 resource "github_repository" "cqrs_symfony" {
-  name          = "cqrs-symfony"
-  description   = "[read-only] Adds additional functionality to the sonsofphp/cqrs package"
-  homepage_url  = "https://docs.sonsofphp.com/components/cqrs"
-  topics        = [
+  name         = "cqrs-symfony"
+  description  = "[read-only] Adds additional functionality to the sonsofphp/cqrs package"
+  homepage_url = "https://docs.sonsofphp.com/components/cqrs"
+  topics = [
     "bridge",
     "cqrs",
     "php",
@@ -184,10 +192,10 @@ resource "github_repository" "cqrs_symfony" {
   has_downloads = false
 }
 resource "github_repository" "event_dispatcher" {
-  name          = "event-dispatcher"
-  description   = "[read-only] Event Dispatcher Component"
-  homepage_url  = "https://docs.sonsofphp.com/components/event-dispatcher"
-  topics        = [
+  name         = "event-dispatcher"
+  description  = "[read-only] Event Dispatcher Component"
+  homepage_url = "https://docs.sonsofphp.com/components/event-dispatcher"
+  topics = [
     "event-dispatcher",
     "php",
     "php-library",
@@ -201,10 +209,10 @@ resource "github_repository" "event_dispatcher" {
   has_downloads = false
 }
 resource "github_repository" "event_sourcing" {
-  name          = "event-sourcing"
-  description   = "[read-only] event sourcing component"
-  homepage_url  = "https://docs.sonsofphp.com/components/event-sourcing"
-  topics        = [
+  name         = "event-sourcing"
+  description  = "[read-only] event sourcing component"
+  homepage_url = "https://docs.sonsofphp.com/components/event-sourcing"
+  topics = [
     "event-sourcing",
     "event-store",
     "php",
@@ -219,10 +227,10 @@ resource "github_repository" "event_sourcing" {
   has_downloads = false
 }
 resource "github_repository" "event_sourcing_doctrine" {
-  name          = "event-sourcing-doctrine"
-  description   = "[read-only] Provides additional functionality to sonsofphp/event-sourcing package"
-  homepage_url  = "https://docs.sonsofphp.com/components/event-sourcing"
-  topics        = [
+  name         = "event-sourcing-doctrine"
+  description  = "[read-only] Provides additional functionality to sonsofphp/event-sourcing package"
+  homepage_url = "https://docs.sonsofphp.com/components/event-sourcing"
+  topics = [
     "doctrine-dbal",
     "doctrine-orm",
     "event-sourcing",
@@ -236,10 +244,10 @@ resource "github_repository" "event_sourcing_doctrine" {
   has_downloads = false
 }
 resource "github_repository" "event_sourcing_symfony" {
-  name          = "event-sourcing-symfony"
-  description   = "[read-only] Provides additional functionality to sonsofphp/event-sourcing package"
-  homepage_url  = "https://docs.sonsofphp.com/components/event-sourcing"
-  topics        = [
+  name         = "event-sourcing-symfony"
+  description  = "[read-only] Provides additional functionality to sonsofphp/event-sourcing package"
+  homepage_url = "https://docs.sonsofphp.com/components/event-sourcing"
+  topics = [
     "event-bus",
     "event-sourcing",
     "php",
@@ -253,10 +261,10 @@ resource "github_repository" "event_sourcing_symfony" {
   has_downloads = false
 }
 resource "github_repository" "feature_toggle" {
-  name          = "feature-toggle"
-  description   = "[read-only] Feature Toggles for PHP"
-  homepage_url  = "https://docs.sonsofphp.com/components/feature-toggle"
-  topics        = [
+  name         = "feature-toggle"
+  description  = "[read-only] Feature Toggles for PHP"
+  homepage_url = "https://docs.sonsofphp.com/components/feature-toggle"
+  topics = [
     "feature-flags",
     "feature-toggles",
     "php",
@@ -271,10 +279,10 @@ resource "github_repository" "feature_toggle" {
   has_downloads = false
 }
 resource "github_repository" "json" {
-  name          = "json"
-  description   = "[read-only] Provides json wrapper"
-  homepage_url  = "https://docs.sonsofphp.com/components/json"
-  topics        = [
+  name         = "json"
+  description  = "[read-only] Provides json wrapper"
+  homepage_url = "https://docs.sonsofphp.com/components/json"
+  topics = [
     "json",
     "json-decoder",
     "json-encoder",
@@ -288,10 +296,10 @@ resource "github_repository" "json" {
   has_downloads = false
 }
 resource "github_repository" "money" {
-  name          = "money"
-  description   = "[read-only] Use when dealing with Money in PHP"
-  homepage_url  = "https://docs.sonsofphp.com/components/money"
-  topics        = [
+  name         = "money"
+  description  = "[read-only] Use when dealing with Money in PHP"
+  homepage_url = "https://docs.sonsofphp.com/components/money"
+  topics = [
     "currencies",
     "currency",
     "iso-4217",
@@ -309,10 +317,10 @@ resource "github_repository" "money" {
   has_downloads = false
 }
 resource "github_repository" "version" {
-  name          = "version"
-  description   = "[read-only] Compare and manage versions using the semver standard"
-  homepage_url  = "https://docs.sonsofphp.com/components/version"
-  topics        = [
+  name         = "version"
+  description  = "[read-only] Compare and manage versions using the semver standard"
+  homepage_url = "https://docs.sonsofphp.com/components/version"
+  topics = [
     "php",
     "semver",
     "version",
@@ -339,7 +347,7 @@ resource "github_repository" "symfony_sop" {
   vulnerability_alerts   = true
   allow_auto_merge       = true
   delete_branch_on_merge = true
-  topics                 = [
+  topics = [
     "domain-driven-design",
     "hacktoberfest",
     "hexagonal-architecture",
