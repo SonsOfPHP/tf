@@ -1,3 +1,6 @@
+variable "github_token" {
+}
+
 terraform {
   cloud {
     organization = "SonsOfPHP"
