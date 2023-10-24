@@ -14,7 +14,7 @@ variable "readonly_repos" {
     bard = {
       name         = "bard"
       description  = "[read-only] Tool that helps manage monorepos"
-      homepage_url = "https://docs.sonsofphp.com"
+      homepage_url = "https://docs.sonsofphp.com/bard"
       topics       = ["bard-php", "monorepo", "php", "php8"]
     },
     clock = {
