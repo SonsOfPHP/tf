@@ -1,4 +1,29 @@
 variable "github_token" {
+    type = string
+    sensitive = true
+}
+
+variable "readonly_repos" {
+    type = map(object({
+        name = string
+        description = string
+        homepage_url = string
+        topics = list(string)
+    }))
+    default = {
+        testing = {
+            name = "testing"
+            description = ""
+            homepage_url = ""
+            topics = []
+        },
+        bard = {
+            name = "bard"
+            description = ""
+            homepage_url = ""
+            topics = []
+        }
+    }
 }
 
 terraform {
@@ -112,6 +137,19 @@ resource "github_repository" "sonsofphp" {
 # @see https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_label
 
 # Read Only Repositories for projects
+#resource "github_repository" "readonly" {
+#    for_each      = var.readonly_repos
+#    name          = each.key
+#    description   = each.value.description
+#    homepage_url  = each.value.homepage_url
+#    topics        = each.value.topics
+#    visibility    = "public"
+#    has_issues    = false
+#    has_projects  = false
+#    has_wiki      = false
+#    has_downloads = false
+#}
+
 resource "github_repository" "bard" {
   name          = "bard"
   description   = "[read-only] Tool that helps manage monorepos"
