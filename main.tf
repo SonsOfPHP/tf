@@ -1,4 +1,95 @@
 variable "github_token" {
+  type      = string
+  sensitive = true
+}
+
+variable "readonly_repos" {
+  type = map(object({
+    name         = string
+    description  = string
+    homepage_url = string
+    topics       = list(string)
+  }))
+  default = {
+    bard = {
+      name         = "bard"
+      description  = "[read-only] Tool that helps manage monorepos"
+      homepage_url = "https://docs.sonsofphp.com"
+      topics       = ["bard-php", "monorepo", "php", "php8"]
+    },
+    clock = {
+      name         = "clock"
+      description  = "[read-only] Lightweight clock implementation to abstract away using PHP's DateTime objects"
+      homepage_url = "https://docs.sonsofphp.com/components/clock"
+      topics       = ["clock", "date", "datetime", "php", "php-clock", "php-library", "psr-20", "time"]
+    },
+    cqrs = {
+      name         = "cqrs"
+      description  = "[read-only] CQRS to help get you up and running quickly"
+      homepage_url = "https://docs.sonsofphp.com/components/cqrs"
+      topics       = ["command-query-response-segregation", "cqrs", "php", "php-cqrs"]
+    },
+    cqrs_bundle = {
+      name         = "cqrs-bundle"
+      description  = "[read-only] Symfony CQRS Bundle"
+      homepage_url = "https://docs.sonsofphp.com/components/cqrs"
+      topics       = ["sonsofphp", "cqrs", "php", "symfony", "symfony-bundle"]
+    },
+    cqrs_symfony = {
+      name         = "cqrs-symfony"
+      description  = "[read-only] Adds additional functionality to the sonsofphp/cqrs package"
+      homepage_url = "https://docs.sonsofphp.com/components/cqrs"
+      topics       = ["bridge", "cqrs", "php", "symfony"]
+    },
+    event_dispatcher = {
+      name         = "event-dispatcher"
+      description  = "[read-only] Event Dispatcher Component"
+      homepage_url = "https://docs.sonsofphp.com/components/event-dispatcher"
+      topics       = ["event-dispatcher", "php", "php-library", "psr-14"]
+    },
+    event_sourcing = {
+      name         = "event-sourcing"
+      description  = "[read-only] event sourcing component"
+      homepage_url = "https://docs.sonsofphp.com/components/event-sourcing"
+      topics       = ["event-sourcing", "event-store", "php", "php-event-sourcing", "php-library"]
+    },
+    event_sourcing_doctrine = {
+      name         = "event-sourcing-doctrine"
+      description  = "[read-only] Provides additional functionality to sonsofphp/event-sourcing package"
+      homepage_url = "https://docs.sonsofphp.com/components/event-sourcing"
+      topics       = ["doctrine-dbal", "doctrine-orm", "event-sourcing", "php"]
+    },
+    event_sourcing_symfony = {
+      name         = "event-sourcing-symfony"
+      description  = "[read-only] Provides additional functionality to sonsofphp/event-sourcing package"
+      homepage_url = "https://docs.sonsofphp.com/components/event-sourcing"
+      topics       = ["event-bus", "event-sourcing", "php", "symfony"]
+    },
+    feature_toggle = {
+      name         = "feature-toggle"
+      description  = "[read-only] Feature Toggles for PHP"
+      homepage_url = "https://docs.sonsofphp.com/components/feature-toggle"
+      topics       = ["feature-flags", "feature-toggles", "php", "php-library", "toggles"]
+    },
+    json = {
+      name         = "json"
+      description  = "[read-only] Provides json wrapper"
+      homepage_url = "https://docs.sonsofphp.com/components/json"
+      topics       = ["json", "json-decoder", "json-encoder", "php"]
+    },
+    money = {
+      name         = "money"
+      description  = "[read-only] Use when dealing with Money in PHP"
+      homepage_url = "https://docs.sonsofphp.com/components/money"
+      topics       = ["currencies", "currency", "iso-4217", "library", "monetary", "money", "php", "php-money"]
+    },
+    version = {
+      name         = "version"
+      description  = "[read-only] Compare and manage versions using the semver standard"
+      homepage_url = "https://docs.sonsofphp.com/components/version"
+      topics       = ["php", "semver", "version", "version-parser"]
+    }
+  }
 }
 
 terraform {
@@ -92,6 +183,13 @@ resource "github_repository" "sonsofphp" {
   has_issues             = true
   has_projects           = false
   has_wiki               = false
+  allow_merge_commit     = false
+  allow_rebase_merge     = false
+
+  allow_squash_merge          = true
+  squash_merge_commit_title   = "PR_TITLE"
+  squash_merge_commit_message = "PR_BODY"
+
   pages {
     cname = "docs.sonsofphp.com"
     source {
@@ -105,237 +203,19 @@ resource "github_repository" "sonsofphp" {
 # @see https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_label
 
 # Read Only Repositories for projects
-resource "github_repository" "bard" {
-  name          = "bard"
-  description   = "[read-only] Tool that helps manage monorepos"
-  homepage_url  = "https://docs.sonsofphp.com"
+resource "github_repository" "readonly" {
+  for_each      = var.readonly_repos
+  name          = each.value.name
+  description   = each.value.description
+  homepage_url  = each.value.homepage_url
+  topics        = each.value.topics
   visibility    = "public"
   has_issues    = false
   has_projects  = false
   has_wiki      = false
   has_downloads = false
-  topics = [
-    "bard-php",
-    "monorepo",
-    "php",
-    "php8",
-  ]
 }
-resource "github_repository" "clock" {
-  name         = "clock"
-  description  = "[read-only] Lightweight clock implementation to abstract away using PHP's DateTime objects"
-  homepage_url = "https://docs.sonsofphp.com/components/clock"
-  topics = [
-    "clock",
-    "date",
-    "datetime",
-    "php",
-    "php-clock",
-    "php-library",
-    "psr-20",
-    "time",
-  ]
 
-  visibility    = "public"
-  has_issues    = false
-  has_projects  = false
-  has_wiki      = false
-  has_downloads = false
-}
-resource "github_repository" "cqrs" {
-  name         = "cqrs"
-  description  = "[read-only] CQRS to help get you up and running quickly"
-  homepage_url = "https://docs.sonsofphp.com/components/cqrs"
-  topics = [
-    "command-query-response-segregation",
-    "cqrs",
-    "php",
-    "php-cqrs",
-  ]
-
-  visibility    = "public"
-  has_issues    = false
-  has_projects  = false
-  has_wiki      = false
-  has_downloads = false
-}
-resource "github_repository" "cqrs_bundle" {
-  name         = "cqrs-bundle"
-  description  = "[read-only] Symfony CQRS Bundle"
-  homepage_url = "https://docs.sonsofphp.com/components/cqrs"
-  topics = [
-    "sonsofphp",
-    "cqrs",
-    "php",
-    "symfony",
-    "symfony-bundle",
-  ]
-
-  visibility    = "public"
-  has_issues    = false
-  has_projects  = false
-  has_wiki      = false
-  has_downloads = false
-}
-resource "github_repository" "cqrs_symfony" {
-  name         = "cqrs-symfony"
-  description  = "[read-only] Adds additional functionality to the sonsofphp/cqrs package"
-  homepage_url = "https://docs.sonsofphp.com/components/cqrs"
-  topics = [
-    "bridge",
-    "cqrs",
-    "php",
-    "symfony",
-  ]
-
-  visibility    = "public"
-  has_issues    = false
-  has_projects  = false
-  has_wiki      = false
-  has_downloads = false
-}
-resource "github_repository" "event_dispatcher" {
-  name         = "event-dispatcher"
-  description  = "[read-only] Event Dispatcher Component"
-  homepage_url = "https://docs.sonsofphp.com/components/event-dispatcher"
-  topics = [
-    "event-dispatcher",
-    "php",
-    "php-library",
-    "psr-14",
-  ]
-
-  visibility    = "public"
-  has_issues    = false
-  has_projects  = false
-  has_wiki      = false
-  has_downloads = false
-}
-resource "github_repository" "event_sourcing" {
-  name         = "event-sourcing"
-  description  = "[read-only] event sourcing component"
-  homepage_url = "https://docs.sonsofphp.com/components/event-sourcing"
-  topics = [
-    "event-sourcing",
-    "event-store",
-    "php",
-    "php-event-sourcing",
-    "php-library",
-  ]
-
-  visibility    = "public"
-  has_issues    = false
-  has_projects  = false
-  has_wiki      = false
-  has_downloads = false
-}
-resource "github_repository" "event_sourcing_doctrine" {
-  name         = "event-sourcing-doctrine"
-  description  = "[read-only] Provides additional functionality to sonsofphp/event-sourcing package"
-  homepage_url = "https://docs.sonsofphp.com/components/event-sourcing"
-  topics = [
-    "doctrine-dbal",
-    "doctrine-orm",
-    "event-sourcing",
-    "php",
-  ]
-
-  visibility    = "public"
-  has_issues    = false
-  has_projects  = false
-  has_wiki      = false
-  has_downloads = false
-}
-resource "github_repository" "event_sourcing_symfony" {
-  name         = "event-sourcing-symfony"
-  description  = "[read-only] Provides additional functionality to sonsofphp/event-sourcing package"
-  homepage_url = "https://docs.sonsofphp.com/components/event-sourcing"
-  topics = [
-    "event-bus",
-    "event-sourcing",
-    "php",
-    "symfony",
-  ]
-
-  visibility    = "public"
-  has_issues    = false
-  has_projects  = false
-  has_wiki      = false
-  has_downloads = false
-}
-resource "github_repository" "feature_toggle" {
-  name         = "feature-toggle"
-  description  = "[read-only] Feature Toggles for PHP"
-  homepage_url = "https://docs.sonsofphp.com/components/feature-toggle"
-  topics = [
-    "feature-flags",
-    "feature-toggles",
-    "php",
-    "php-library",
-    "toggles",
-  ]
-
-  visibility    = "public"
-  has_issues    = false
-  has_projects  = false
-  has_wiki      = false
-  has_downloads = false
-}
-resource "github_repository" "json" {
-  name         = "json"
-  description  = "[read-only] Provides json wrapper"
-  homepage_url = "https://docs.sonsofphp.com/components/json"
-  topics = [
-    "json",
-    "json-decoder",
-    "json-encoder",
-    "php",
-  ]
-
-  visibility    = "public"
-  has_issues    = false
-  has_projects  = false
-  has_wiki      = false
-  has_downloads = false
-}
-resource "github_repository" "money" {
-  name         = "money"
-  description  = "[read-only] Use when dealing with Money in PHP"
-  homepage_url = "https://docs.sonsofphp.com/components/money"
-  topics = [
-    "currencies",
-    "currency",
-    "iso-4217",
-    "library",
-    "monetary",
-    "money",
-    "php",
-    "php-money",
-  ]
-
-  visibility    = "public"
-  has_issues    = false
-  has_projects  = false
-  has_wiki      = false
-  has_downloads = false
-}
-resource "github_repository" "version" {
-  name         = "version"
-  description  = "[read-only] Compare and manage versions using the semver standard"
-  homepage_url = "https://docs.sonsofphp.com/components/version"
-  topics = [
-    "php",
-    "semver",
-    "version",
-    "version-parser",
-  ]
-
-  visibility    = "public"
-  has_issues    = false
-  has_projects  = false
-  has_wiki      = false
-  has_downloads = false
-}
 # Additional Repositories
 resource "github_repository" "symfony_sop" {
   name                   = "symfony-sop"
