@@ -3,7 +3,7 @@ variable "github_token" {
   sensitive = true
 }
 
-variable "readonly_repos" {
+variable "github_readonly_repos" {
   type = map(object({
     name         = string
     description  = string
@@ -71,6 +71,12 @@ variable "readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/components/feature-toggle"
       topics       = ["feature-flags", "feature-toggles", "php", "php-library", "toggles"]
     },
+    filesystem = {
+      name         = "filesystem"
+      description  = "[read-only] Abstract Filesystem that can be used with various services"
+      homepage_url = "https://docs.sonsofphp.com/components/filesystem"
+      topics       = ["php", "php-library", "filesystem", "virtual-filesystem"]
+    },
     json = {
       name         = "json"
       description  = "[read-only] Provides json wrapper"
@@ -90,6 +96,36 @@ variable "readonly_repos" {
       topics       = ["php", "semver", "version", "version-parser"]
     }
   }
+}
+
+# @todo Implement labels for the mother repo
+variable "github_sonsofphp_labels" {
+    type = map(object({
+        name        = string
+        color       = string
+        description = string
+    }))
+
+    default = {
+        Filesystem = {
+            name = "Filesystem"
+            color = "5319e7"
+            description = "Issues related to Filesystem Component"
+        }
+    }
+}
+
+# @todo Manage the membership
+variable "github_admins" {
+    default = ["JoshuaEstes"]
+}
+variable "github_members" {
+    default = []
+}
+
+# @todo Manage teams and membership to those teams
+variable "github_teams" {
+    default = ["Members"]
 }
 
 terraform {
@@ -185,6 +221,7 @@ resource "github_repository" "sonsofphp" {
   has_wiki               = false
   allow_merge_commit     = false
   allow_rebase_merge     = false
+  has_discussions        = true
 
   allow_squash_merge          = true
   squash_merge_commit_title   = "PR_TITLE"
@@ -204,7 +241,7 @@ resource "github_repository" "sonsofphp" {
 
 # Read Only Repositories for projects
 resource "github_repository" "readonly" {
-  for_each      = var.readonly_repos
+  for_each      = var.github_readonly_repos
   name          = each.value.name
   description   = each.value.description
   homepage_url  = each.value.homepage_url
