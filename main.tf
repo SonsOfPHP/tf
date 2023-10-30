@@ -77,6 +77,36 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/components/filesystem"
       topics       = ["php", "php-library", "filesystem", "virtual-filesystem"]
     },
+    http = {
+      name         = "http"
+      description  = "[read-only] http component"
+      homepage_url = "https://docs.sonsofphp.com/components/http"
+      topics       = ["php", "php-library", "psr-7", "psr-15", "psr-17", "psr-18", "http", "http-client", "http-factory", "http-handler", "http-message"]
+    },
+    http_client = {
+      name         = "http-client"
+      description  = "[read-only] http-client component"
+      homepage_url = "https://docs.sonsofphp.com/components/http-client"
+      topics       = ["php", "php-library", "psr-18", "http-client"]
+    },
+    http_factory = {
+      name         = "http-factory"
+      description  = "[read-only] http-factory component"
+      homepage_url = "https://docs.sonsofphp.com/components/http-factory"
+      topics       = ["php", "php-library", "psr-17", "http-factory"]
+    },
+    http_handler = {
+      name         = "http-handler"
+      description  = "[read-only] http-handler component"
+      homepage_url = "https://docs.sonsofphp.com/components/http-handler"
+      topics       = ["php", "php-library", "psr-15", "http-handler"]
+    },
+    http_message = {
+      name         = "http-message"
+      description  = "[read-only] http-message component"
+      homepage_url = "https://docs.sonsofphp.com/components/http-message"
+      topics       = ["php", "php-library", "psr-7", "http-message"]
+    },
     json = {
       name         = "json"
       description  = "[read-only] Provides json wrapper"
@@ -98,7 +128,6 @@ variable "github_readonly_repos" {
   }
 }
 
-# @todo Implement labels for the mother repo
 variable "github_sonsofphp_labels" {
     type = map(object({
         name        = string
@@ -110,20 +139,17 @@ variable "github_sonsofphp_labels" {
         Filesystem = {
             name = "Filesystem"
             color = "5319e7"
-            description = "Issues related to Filesystem Component"
+            description = "Filesystem Component"
         }
     }
 }
 
-# @todo Manage the membership
 variable "github_admins" {
     default = ["JoshuaEstes"]
 }
 variable "github_members" {
     default = []
 }
-
-# @todo Manage teams and membership to those teams
 variable "github_teams" {
     default = ["Members"]
 }
@@ -238,6 +264,13 @@ resource "github_repository" "sonsofphp" {
 ###
 # Labels for the Mother Repo
 # @see https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_label
+#resource "github_issue_label" "sonsofphp" {
+#    for_each    = var.github_sonsofphp_labels
+#    repository  = "sonsofphp"
+#    name        = each.key
+#    color       = each.value.color
+#    description = each.value.description
+#}
 
 # Read Only Repositories for projects
 resource "github_repository" "readonly" {
