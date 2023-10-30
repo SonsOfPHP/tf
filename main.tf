@@ -129,29 +129,29 @@ variable "github_readonly_repos" {
 }
 
 variable "github_sonsofphp_labels" {
-    type = map(object({
-        name        = string
-        color       = string
-        description = string
-    }))
+  type = map(object({
+    name        = string
+    color       = string
+    description = string
+  }))
 
-    default = {
-        Filesystem = {
-            name = "Filesystem"
-            color = "5319e7"
-            description = "Filesystem Component"
-        }
+  default = {
+    Filesystem = {
+      name        = "Filesystem"
+      color       = "5319e7"
+      description = "Filesystem Component"
     }
+  }
 }
 
 variable "github_admins" {
-    default = ["JoshuaEstes"]
+  default = ["JoshuaEstes"]
 }
 variable "github_members" {
-    default = []
+  default = []
 }
 variable "github_teams" {
-    default = ["Members"]
+  default = ["Members"]
 }
 
 terraform {
