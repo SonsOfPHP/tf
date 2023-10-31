@@ -89,12 +89,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/components/http-client"
       topics       = ["php", "php-library", "psr-18", "http-client"]
     },
-    #http_factory = {
-    #  name         = "http-factory"
-    #  description  = "[read-only] http-factory component"
-    #  homepage_url = "https://docs.sonsofphp.com/components/http-factory"
-    #  topics       = ["php", "php-library", "psr-17", "http-factory"]
-    #},
+    http_factory = {
+      name         = "http-factory"
+      description  = "[read-only] http-factory component"
+      homepage_url = "https://docs.sonsofphp.com/components/http-factory"
+      topics       = ["php", "php-library", "psr-17", "http-factory"]
+    },
     #http_handler = {
     #  name         = "http-handler"
     #  description  = "[read-only] http-handler component"
