@@ -11,6 +11,12 @@ variable "github_readonly_repos" {
     topics       = list(string)
   }))
   default = {
+    core_contract = {
+      name         = "core-contract"
+      description  = "[read-only] Generic PHP Interfaces"
+      homepage_url = "https://docs.sonsofphp.com/contracts/core"
+      topics       = ["sons-of-php", "php"]
+    },
     bard = {
       name         = "bard"
       description  = "[read-only] Tool that helps manage monorepos"
