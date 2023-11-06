@@ -11,17 +11,25 @@ variable "github_readonly_repos" {
     topics       = list(string)
   }))
   default = {
+    bard = {
+      name         = "bard"
+      description  = "[read-only] Tool that helps manage monorepos"
+      homepage_url = "https://docs.sonsofphp.com/bard"
+      topics       = ["sons-of-php", "bard-php", "monorepo", "php", "php8"]
+    },
+    # Contracts
     core_contract = {
       name         = "core-contract"
       description  = "[read-only] Generic PHP Interfaces"
       homepage_url = "https://docs.sonsofphp.com/contracts/core"
       topics       = ["sons-of-php", "php"]
     },
-    bard = {
-      name         = "bard"
-      description  = "[read-only] Tool that helps manage monorepos"
-      homepage_url = "https://docs.sonsofphp.com/bard"
-      topics       = ["sons-of-php", "bard-php", "monorepo", "php", "php8"]
+    # Components
+    cache = {
+      name         = "cache"
+      description  = "[read-only] Cache component"
+      homepage_url = "https://docs.sonsofphp.com/components/cache"
+      topics       = ["sons-of-php", "php", "psr-6", "psr-16", "cache", "simple-cache", "cache-implementation"]
     },
     clock = {
       name         = "clock"
