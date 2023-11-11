@@ -18,10 +18,10 @@ variable "github_readonly_repos" {
       topics       = ["sonsofphp", "sons-of-php", "bard-php", "monorepo", "php", "php8"]
     },
     # Contracts
-    core_contract = {
-      name         = "core-contract"
+    common_contract = {
+      name         = "common-contract"
       description  = "[read-only] Generic PHP Interfaces"
-      homepage_url = "https://docs.sonsofphp.com/contracts/core"
+      homepage_url = "https://docs.sonsofphp.com/contracts/common"
       topics       = ["sonsofphp", "sons-of-php", "php", "stdlib"]
     },
     cqrs_contract = {
