@@ -54,6 +54,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/contracts/money"
       topics       = ["sonsofphp", "sons-of-php", "php", "money"]
     },
+    version_contract = {
+      name         = "version-contract"
+      description  = "[read-only] Version Contacts"
+      homepage_url = "https://docs.sonsofphp.com/contracts/version"
+      topics       = ["sonsofphp", "sons-of-php", "php", "version"]
+    },
     # Components
     cache = {
       name         = "cache"
