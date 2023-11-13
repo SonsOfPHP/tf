@@ -48,6 +48,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/contracts/filesystem"
       topics       = ["sonsofphp", "sons-of-php", "php", "virtual-filesystem"]
     },
+    logger_contract = {
+      name         = "logger-contract"
+      description  = "[read-only] Logger Contacts"
+      homepage_url = "https://docs.sonsofphp.com/contracts/logger"
+      topics       = ["sonsofphp", "sons-of-php", "php", "logger"]
+    },
     money_contract = {
       name         = "money-contract"
       description  = "[read-only] Money Contacts"
@@ -165,7 +171,7 @@ variable "github_readonly_repos" {
     },
     logger = {
       name         = "logger"
-      description  = "[read-only] PHP Logger"
+      description  = "[read-only] PHP Logger (PSR-3 Compatible)"
       homepage_url = "https://docs.sonsofphp.com/components/logger"
       topics       = ["sonsofphp", "sons-of-php", "php", "psr-3", "logger"]
     },
