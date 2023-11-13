@@ -161,7 +161,13 @@ variable "github_readonly_repos" {
       name         = "json"
       description  = "[read-only] Provides json wrapper"
       homepage_url = "https://docs.sonsofphp.com/components/json"
-      topics       = ["sonsofphp", "sons-of-php", "json", "json-decoder", "json-encoder", "php"]
+      topics       = ["sonsofphp", "sons-of-php", "php", "json", "json-decoder", "json-encoder", "php"]
+    },
+    logger = {
+      name         = "logger"
+      description  = "[read-only] PHP Logger"
+      homepage_url = "https://docs.sonsofphp.com/components/logger"
+      topics       = ["sonsofphp", "sons-of-php", "php", "psr-3", "logger"]
     },
     money = {
       name         = "money"
