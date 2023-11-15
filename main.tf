@@ -200,14 +200,13 @@ variable "github_sonsofphp_labels" {
   type = map(object({
     name        = string
     color       = string
-    description = string
+    #description = string
   }))
 
   default = {
-    Filesystem = {
-      name        = "Filesystem"
-      color       = "5319e7"
-      description = "Filesystem Component"
+    Pager = {
+      name  = "Pager"
+      color = "5319e7"
     }
   }
 }
@@ -332,13 +331,13 @@ resource "github_repository" "sonsofphp" {
 ###
 # Labels for the Mother Repo
 # @see https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_label
-#resource "github_issue_label" "sonsofphp" {
-#    for_each    = var.github_sonsofphp_labels
-#    repository  = "sonsofphp"
-#    name        = each.key
-#    color       = each.value.color
-#    description = each.value.description
-#}
+resource "github_issue_label" "sonsofphp" {
+    for_each    = var.github_sonsofphp_labels
+    repository  = "sonsofphp"
+    name        = each.key
+    color       = each.value.color
+    #description = each.value.description
+}
 
 # Read Only Repositories for projects
 resource "github_repository" "readonly" {
