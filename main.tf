@@ -173,7 +173,13 @@ variable "github_readonly_repos" {
       name         = "json"
       description  = "[read-only] Provides json wrapper"
       homepage_url = "https://docs.sonsofphp.com/components/json"
-      topics       = ["sonsofphp", "sons-of-php", "php", "json", "json-decoder", "json-encoder", "php"]
+      topics       = ["sonsofphp", "sons-of-php", "php", "json", "json-decoder", "json-encoder"]
+    },
+    link = {
+      name         = "link"
+      description  = "[read-only] Link Component (PSR-13)"
+      homepage_url = "https://docs.sonsofphp.com/components/link"
+      topics       = ["sonsofphp", "sons-of-php", "php", "psr-13"]
     },
     logger = {
       name         = "logger"
@@ -210,10 +216,14 @@ variable "github_sonsofphp_labels" {
   }))
 
   default = {
+    Link = {
+      name  = "Link"
+      color = "5319e7"
+    },
     Pager = {
       name  = "Pager"
       color = "5319e7"
-    }
+    },
   }
 }
 
