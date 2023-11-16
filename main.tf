@@ -193,6 +193,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/components/money"
       topics       = ["sonsofphp", "sons-of-php", "currencies", "currency", "iso-4217", "library", "monetary", "money", "php", "php-money"]
     },
+    money_twig = {
+      name         = "money-twig"
+      description  = "[read-only] Use when dealing with Money in PHP and Twig"
+      homepage_url = "https://docs.sonsofphp.com/components/money"
+      topics       = ["sonsofphp", "sons-of-php", "currencies", "currency", "iso-4217", "library", "monetary", "money", "php", "php-money", "twig"]
+    },
     pager = {
       name         = "pager"
       description  = "[read-only] Pager Component"
