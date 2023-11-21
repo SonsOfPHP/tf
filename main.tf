@@ -139,12 +139,6 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/components/filesystem"
       topics       = ["sonsofphp", "sons-of-php", "php", "php-library", "filesystem", "virtual-filesystem"]
     },
-    #http = {
-    #  name         = "http"
-    #  description  = "[read-only] http component"
-    #  homepage_url = "https://docs.sonsofphp.com/components/http"
-    #  topics       = ["sonsofphp", "sons-of-php", "php", "php-library", "psr-7", "psr-15", "psr-17", "psr-18", "http", "http-client", "http-factory", "http-handler", "http-message"]
-    #},
     http_client = {
       name         = "http-client"
       description  = "[read-only] http-client component"
@@ -157,12 +151,6 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/components/http-factory"
       topics       = ["sonsofphp", "sons-of-php", "php", "php-library", "psr-17", "http-factory"]
     },
-    #http_handler = {
-    #  name         = "http-handler"
-    #  description  = "[read-only] http-handler component"
-    #  homepage_url = "https://docs.sonsofphp.com/components/http-handler"
-    #  topics       = ["sonsofphp", "sons-of-php", "php", "php-library", "psr-15", "http-handler"]
-    #},
     http_message = {
       name         = "http-message"
       description  = "[read-only] http-message component"
@@ -202,6 +190,24 @@ variable "github_readonly_repos" {
     pager = {
       name         = "pager"
       description  = "[read-only] Pager Component"
+      homepage_url = "https://docs.sonsofphp.com/components/pager"
+      topics       = ["sonsofphp", "sons-of-php", "php", "php-pager", "pager", "pagination"]
+    },
+    pager-doctrine-collections = {
+      name         = "pager-doctrine-collections"
+      description  = "[read-only] Pager Component that uses doctrine/common"
+      homepage_url = "https://docs.sonsofphp.com/components/pager"
+      topics       = ["sonsofphp", "sons-of-php", "php", "php-pager", "pager", "pagination"]
+    },
+    pager-doctrine-dbal = {
+      name         = "pager-doctrine-dbal"
+      description  = "[read-only] Pager Component that uses doctrine/dbal"
+      homepage_url = "https://docs.sonsofphp.com/components/pager"
+      topics       = ["sonsofphp", "sons-of-php", "php", "php-pager", "pager", "pagination"]
+    },
+    pager-doctrine-orm = {
+      name         = "pager-doctrine-orm"
+      description  = "[read-only] Pager Component that uses doctrine/orm"
       homepage_url = "https://docs.sonsofphp.com/components/pager"
       topics       = ["sonsofphp", "sons-of-php", "php", "php-pager", "pager", "pagination"]
     },
