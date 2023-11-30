@@ -217,6 +217,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/components/pager"
       topics       = ["sonsofphp", "sons-of-php", "php", "php-pager", "pager", "pagination"]
     },
+    search = {
+      name         = "search"
+      description  = "[read-only] Search Component"
+      homepage_url = "https://docs.sonsofphp.com/components/search"
+      topics       = ["sonsofphp", "sons-of-php", "php", "php-search"]
+    },
     version = {
       name         = "version"
       description  = "[read-only] Compare and manage versions using the semver standard"
