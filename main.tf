@@ -72,6 +72,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/contracts/search"
       topics       = ["sonsofphp", "sons-of-php", "php", "search"]
     },
+    user-agent-contract = {
+      name         = "user-agent-contract"
+      description  = "[read-only] User Agent Contact"
+      homepage_url = "https://docs.sonsofphp.com/components/user-agent"
+      topics       = ["sonsofphp", "sons-of-php", "php", "useragent"]
+    },
     version_contract = {
       name         = "version-contract"
       description  = "[read-only] Version Contacts"
@@ -223,6 +229,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/components/search"
       topics       = ["sonsofphp", "sons-of-php", "php", "php-search"]
     },
+    user-agent = {
+      name         = "user-agent"
+      description  = "[read-only] User Agent"
+      homepage_url = "https://docs.sonsofphp.com/components/user-agent"
+      topics       = ["sonsofphp", "sons-of-php", "php", "useragent", "user-agent"]
+    },
     version = {
       name         = "version"
       description  = "[read-only] Compare and manage versions using the semver standard"
@@ -248,8 +260,12 @@ variable "github_sonsofphp_labels" {
       name  = "Pager"
       color = "5319e7"
     },
-    Pager = {
+    Search = {
       name  = "Search"
+      color = "5319e7"
+    },
+    UserAgent = {
+      name  = "UserAgent"
       color = "5319e7"
     },
   }
