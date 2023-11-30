@@ -242,6 +242,10 @@ variable "github_sonsofphp_labels" {
       name  = "Pager"
       color = "5319e7"
     },
+    Pager = {
+      name  = "Search"
+      color = "5319e7"
+    },
   }
 }
 
