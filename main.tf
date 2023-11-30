@@ -66,6 +66,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/contracts/pager"
       topics       = ["sonsofphp", "sons-of-php", "php", "pager", "pagination"]
     },
+    search-contract = {
+      name         = "search-contract"
+      description  = "[read-only] Search Contact"
+      homepage_url = "https://docs.sonsofphp.com/contracts/search"
+      topics       = ["sonsofphp", "sons-of-php", "php", "search"]
+    },
     version_contract = {
       name         = "version-contract"
       description  = "[read-only] Version Contacts"
