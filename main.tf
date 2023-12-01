@@ -18,6 +18,12 @@ variable "github_readonly_repos" {
       topics       = ["sonsofphp", "sons-of-php", "bard-php", "monorepo", "php", "php8"]
     },
     # Contracts
+    cookie-contract = {
+      name         = "cookie-contract"
+      description  = "[read-only] Cookie Contract"
+      homepage_url = "https://docs.sonsofphp.com/contracts/cookie"
+      topics       = ["sonsofphp", "sons-of-php", "php", "cookie"]
+    },
     common_contract = {
       name         = "common-contract"
       description  = "[read-only] Generic PHP Interfaces"
@@ -96,6 +102,12 @@ variable "github_readonly_repos" {
       description  = "[read-only] Lightweight clock implementation to abstract away using PHP's DateTime objects"
       homepage_url = "https://docs.sonsofphp.com/components/clock"
       topics       = ["sonsofphp", "sons-of-php", "clock", "date", "datetime", "php", "php-clock", "php-library", "psr-20", "time"]
+    },
+    cookie = {
+      name         = "cookie"
+      description  = "[read-only] Cookie Component"
+      homepage_url = "https://docs.sonsofphp.com/components/cookie"
+      topics       = ["sonsofphp", "sons-of-php", "php", "cookie"]
     },
     cqrs = {
       name         = "cqrs"
@@ -252,6 +264,10 @@ variable "github_sonsofphp_labels" {
   }))
 
   default = {
+    Cookie = {
+      name  = "Cookie"
+      color = "5319e7"
+    },
     Link = {
       name  = "Link"
       color = "5319e7"
