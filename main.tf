@@ -11,6 +11,7 @@ variable "github_readonly_repos" {
     topics       = list(string)
   }))
   default = {
+    # Projects
     bard = {
       name         = "bard"
       description  = "[read-only] Tool that helps manage monorepos"
@@ -102,6 +103,12 @@ variable "github_readonly_repos" {
       description  = "[read-only] Lightweight clock implementation to abstract away using PHP's DateTime objects"
       homepage_url = "https://docs.sonsofphp.com/components/clock"
       topics       = ["sonsofphp", "sons-of-php", "clock", "date", "datetime", "php", "php-clock", "php-library", "psr-20", "time"]
+    },
+    container = {
+      name         = "container"
+      description  = "[read-only] Container Component (PSR-11)"
+      homepage_url = "https://docs.sonsofphp.com/components/container"
+      topics       = ["sonsofphp", "sons-of-php", "php", "container", "psr-11", "psr11"]
     },
     cookie = {
       name         = "cookie"
@@ -264,6 +271,10 @@ variable "github_sonsofphp_labels" {
   }))
 
   default = {
+    Container = {
+      name  = "Container"
+      color = "5319e7"
+    },
     Cookie = {
       name  = "Cookie"
       color = "5319e7"
