@@ -182,6 +182,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/components/http-factory"
       topics       = ["sonsofphp", "sons-of-php", "php", "php-library", "psr-17", "http-factory"]
     },
+    http-handler = {
+      name         = "http-handler"
+      description  = "[read-only] HttpHandler component"
+      homepage_url = "https://docs.sonsofphp.com/components/http-handler"
+      topics       = ["sonsofphp", "sons-of-php", "php", "psr-15", "http-handler"]
+    },
     http_message = {
       name         = "http-message"
       description  = "[read-only] http-message component"
@@ -277,6 +283,10 @@ variable "github_sonsofphp_labels" {
     },
     Cookie = {
       name  = "Cookie"
+      color = "5319e7"
+    },
+    HttpHandler = {
+      name  = "HttpHandler"
       color = "5319e7"
     },
     Link = {
