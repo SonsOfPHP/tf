@@ -67,6 +67,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/contracts/logger"
       topics       = ["sonsofphp", "sons-of-php", "php", "logger"]
     },
+    mailer-contract = {
+      name         = "mailer-contract"
+      description  = "[read-only] Mailer Contact"
+      homepage_url = "https://docs.sonsofphp.com/contracts/mailer"
+      topics       = ["sonsofphp", "sons-of-php", "php", "mailer"]
+    },
     money_contract = {
       name         = "money-contract"
       description  = "[read-only] Money Contacts"
@@ -218,6 +224,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/components/logger"
       topics       = ["sonsofphp", "sons-of-php", "php", "psr-3", "logger"]
     },
+    mailer = {
+      name         = "mailer"
+      description  = "[read-only] Mailer Component"
+      homepage_url = "https://docs.sonsofphp.com/components/mailer"
+      topics       = ["sonsofphp", "sons-of-php", "php", "mailer"]
+    },
     money = {
       name         = "money"
       description  = "[read-only] Use when dealing with Money in PHP"
@@ -297,6 +309,10 @@ variable "github_sonsofphp_labels" {
     },
     Link = {
       name  = "Link"
+      color = "5319e7"
+    },
+    Mailer = {
+      name  = "Mailer"
       color = "5319e7"
     },
     Pager = {
