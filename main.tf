@@ -55,6 +55,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/contracts/filesystem"
       topics       = ["sonsofphp", "sons-of-php", "php", "virtual-filesystem"]
     },
+    http-handler-contract = {
+      name         = "http-handler-contract"
+      description  = "[read-only] Http Handler Contacts"
+      homepage_url = "https://docs.sonsofphp.com/contracts/http-handler"
+      topics       = ["sonsofphp", "sons-of-php", "php", "http-handler"]
+    },
     logger_contract = {
       name         = "logger-contract"
       description  = "[read-only] Logger Contacts"
