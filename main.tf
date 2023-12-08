@@ -55,6 +55,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/contracts/filesystem"
       topics       = ["sonsofphp", "sons-of-php", "php", "virtual-filesystem"]
     },
+    gateway-contract = {
+      name         = "gateway-contract"
+      description  = "[read-only] Gateway Contract"
+      homepage_url = "https://docs.sonsofphp.com/contracts/gateway"
+      topics       = ["sonsofphp", "sons-of-php", "php", "gateway", "payment-processing"]
+    },
     http-handler-contract = {
       name         = "http-handler-contract"
       description  = "[read-only] Http Handler Contacts"
@@ -182,6 +188,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/components/filesystem"
       topics       = ["sonsofphp", "sons-of-php", "php", "php-library", "filesystem", "virtual-filesystem"]
     },
+    gateway = {
+      name         = "gateway"
+      description  = "[read-only] Gateway"
+      homepage_url = "https://docs.sonsofphp.com/components/gateway"
+      topics       = ["sonsofphp", "sons-of-php", "php", "php-library", "gateway", "payment-processing"]
+    },
     http_client = {
       name         = "http-client"
       description  = "[read-only] http-client component"
@@ -301,6 +313,10 @@ variable "github_sonsofphp_labels" {
     },
     Cookie = {
       name  = "Cookie"
+      color = "5319e7"
+    },
+    Gateway = {
+      name  = "Gateway"
       color = "5319e7"
     },
     HttpHandler = {
