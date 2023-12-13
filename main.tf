@@ -343,28 +343,80 @@ variable "github_sonsofphp_labels" {
   }))
 
   default = {
+    Cache = {
+      name  = "Cache"
+      color = "5319e7"
+    },
+    Clock = {
+      name  = "Cache"
+      color = "5319e7"
+    },
     Container = {
       name  = "Container"
+      color = "5319e7"
+    },
+    CQRS = {
+      name  = "CQRS"
       color = "5319e7"
     },
     Cookie = {
       name  = "Cookie"
       color = "5319e7"
     },
+    EventDispatcher = {
+      name  = "EventDispatcher"
+      color = "5319e7"
+    },
+    EventSourcing = {
+      name  = "EventSourcing"
+      color = "5319e7"
+    },
+    FeatureToggle = {
+      name  = "FeatureToggle"
+      color = "5319e7"
+    },
     Gateway = {
       name  = "Gateway"
+      color = "5319e7"
+    },
+    HttpClient = {
+      name  = "HttpClient"
+      color = "5319e7"
+    },
+    HttpFactory = {
+      name  = "HttpFactory"
       color = "5319e7"
     },
     HttpHandler = {
       name  = "HttpHandler"
       color = "5319e7"
     },
+    HttpMessage = {
+      name  = "HttpMessage"
+      color = "5319e7"
+    },
+    JSON = {
+      name  = "JSON"
+      color = "5319e7"
+    },
     Link = {
       name  = "Link"
       color = "5319e7"
     },
+    Logger = {
+      name  = "Logger"
+      color = "5319e7"
+    },
     Mailer = {
       name  = "Mailer"
+      color = "5319e7"
+    },
+    MessageBus = {
+      name  = "MessageBus"
+      color = "5319e7"
+    },
+    Money = {
+      name  = "Money"
       color = "5319e7"
     },
     Pager = {
@@ -389,6 +441,10 @@ variable "github_sonsofphp_labels" {
     },
     Validator = {
       name  = "Validator"
+      color = "5319e7"
+    },
+    Version = {
+      name  = "Version"
       color = "5319e7"
     },
   }
