@@ -91,6 +91,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/contracts/pager"
       topics       = ["sonsofphp", "sons-of-php", "php", "pager", "pagination"]
     },
+    router-contract = {
+      name         = "router-contract"
+      description  = "[read-only] Router Contacts"
+      homepage_url = "https://docs.sonsofphp.com/contracts/router"
+      topics       = ["sonsofphp", "sons-of-php", "php", "router"]
+    },
     search-contract = {
       name         = "search-contract"
       description  = "[read-only] Search Contact"
@@ -290,6 +296,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/components/pager"
       topics       = ["sonsofphp", "sons-of-php", "php", "php-pager", "pager", "pagination"]
     },
+    router = {
+      name         = "router"
+      description  = "[read-only] Router Component"
+      homepage_url = "https://docs.sonsofphp.com/components/router"
+      topics       = ["sonsofphp", "sons-of-php", "php", "router"]
+    },
     search = {
       name         = "search"
       description  = "[read-only] Search Component"
@@ -357,6 +369,10 @@ variable "github_sonsofphp_labels" {
     },
     Pager = {
       name  = "Pager"
+      color = "5319e7"
+    },
+    Router = {
+      name  = "Router"
       color = "5319e7"
     },
     Search = {
