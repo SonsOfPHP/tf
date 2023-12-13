@@ -109,6 +109,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/components/user-agent"
       topics       = ["sonsofphp", "sons-of-php", "php", "useragent"]
     },
+    validator-contract = {
+      name         = "validator-contract"
+      description  = "[read-only] Validator Contract"
+      homepage_url = "https://docs.sonsofphp.com/contracts/validator"
+      topics       = ["sonsofphp", "sons-of-php", "php", "validator"]
+    },
     version_contract = {
       name         = "version-contract"
       description  = "[read-only] Version Contacts"
@@ -302,6 +308,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/components/user-agent"
       topics       = ["sonsofphp", "sons-of-php", "php", "useragent", "user-agent"]
     },
+    validator = {
+      name         = "validator"
+      description  = "[read-only] Validator"
+      homepage_url = "https://docs.sonsofphp.com/components/validator"
+      topics       = ["sonsofphp", "sons-of-php", "php", "validator"]
+    }
     version = {
       name         = "version"
       description  = "[read-only] Compare and manage versions using the semver standard"
@@ -357,6 +369,10 @@ variable "github_sonsofphp_labels" {
     },
     UserAgent = {
       name  = "UserAgent"
+      color = "5319e7"
+    },
+    Validator = {
+      name  = "Validator"
       color = "5319e7"
     },
   }
