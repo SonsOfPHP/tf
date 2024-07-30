@@ -19,6 +19,12 @@ variable "github_readonly_repos" {
       topics       = ["sonsofphp", "sons-of-php", "bard-php", "monorepo", "php", "php8"]
     },
     # Contracts
+    attribute-contract = {
+      name         = "attribute-contract"
+      description  = "[read-only] Attribute Contract"
+      homepage_url = "https://docs.sonsofphp.com/contracts/attribute"
+      topics       = ["sonsofphp", "sons-of-php", "php", "attribute"]
+    },
     cookie-contract = {
       name         = "cookie-contract"
       description  = "[read-only] Cookie Contract"
@@ -128,6 +134,12 @@ variable "github_readonly_repos" {
       topics       = ["sonsofphp", "sons-of-php", "php", "version"]
     },
     # Components
+    attribute = {
+      name         = "attribute"
+      description  = "[read-only] Attribute component"
+      homepage_url = "https://docs.sonsofphp.com/components/attribute"
+      topics       = ["sonsofphp", "sons-of-php", "php", "attribute"]
+    },
     cache = {
       name         = "cache"
       description  = "[read-only] Cache component"
@@ -343,6 +355,10 @@ variable "github_sonsofphp_labels" {
   }))
 
   default = {
+    Attribute = {
+      name  = "Attribute"
+      color = "5319e7"
+    },
     Cache = {
       name  = "Cache"
       color = "5319e7"
@@ -543,6 +559,8 @@ resource "github_repository" "sonsofphp" {
     "psr-20",
     "sons-of-php",
     "sonsofphp",
+    "ecommerce",
+    "shop",
   ]
   visibility             = "public"
   vulnerability_alerts   = true
