@@ -18,6 +18,256 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/bard"
       topics       = ["sonsofphp", "sons-of-php", "bard-php", "monorepo", "php", "php8"]
     },
+    # Bridges
+    cqrs_symfony = {
+      name         = "cqrs-symfony"
+      description  = "[read-only] Adds additional functionality to the sonsofphp/cqrs package"
+      homepage_url = "https://docs.sonsofphp.com/components/cqrs"
+      topics       = ["sonsofphp", "sons-of-php", "bridge", "cqrs", "php", "symfony"]
+    },
+    event_sourcing_symfony = {
+      name         = "event-sourcing-symfony"
+      description  = "[read-only] Provides additional functionality to sonsofphp/event-sourcing package"
+      homepage_url = "https://docs.sonsofphp.com/components/event-sourcing"
+      topics       = ["sonsofphp", "sons-of-php", "event-bus", "event-sourcing", "php", "symfony"]
+    },
+    filesystem_aws = {
+      name         = "filesystem-aws"
+      description  = "[read-only] Additional Filesystem adapters for AWS"
+      homepage_url = "https://docs.sonsofphp.com/components/filesystem"
+      topics       = ["sonsofphp", "sons-of-php", "php", "aws", "s3"]
+    },
+    filesystem_liip_imagine = {
+      name         = "filesystem-liip-imagine"
+      description  = "[read-only] Can use Filesystem with the liip imagine library"
+      homepage_url = "https://docs.sonsofphp.com/components/filesystem"
+      topics       = ["sonsofphp", "sons-of-php", "php", "liip", "imagine-bundle"]
+    },
+    money_twig = {
+      name         = "money-twig"
+      description  = "[read-only] Use when dealing with Money in PHP and Twig"
+      homepage_url = "https://docs.sonsofphp.com/components/money"
+      topics       = ["sonsofphp", "sons-of-php", "currencies", "currency", "iso-4217", "library", "monetary", "money", "php", "php-money", "twig"]
+    },
+    pager-doctrine-collections = {
+      name         = "pager-doctrine-collections"
+      description  = "[read-only] Pager Component that uses doctrine/common"
+      homepage_url = "https://docs.sonsofphp.com/components/pager"
+      topics       = ["sonsofphp", "sons-of-php", "php", "php-pager", "pager", "pagination"]
+    },
+    pager-doctrine-dbal = {
+      name         = "pager-doctrine-dbal"
+      description  = "[read-only] Pager Component that uses doctrine/dbal"
+      homepage_url = "https://docs.sonsofphp.com/components/pager"
+      topics       = ["sonsofphp", "sons-of-php", "php", "php-pager", "pager", "pagination"]
+    },
+    pager-doctrine-orm = {
+      name         = "pager-doctrine-orm"
+      description  = "[read-only] Pager Component that uses doctrine/orm"
+      homepage_url = "https://docs.sonsofphp.com/components/pager"
+      topics       = ["sonsofphp", "sons-of-php", "php", "php-pager", "pager", "pagination"]
+    },
+    # Bundles
+    clock_bundle = {
+      name         = "clock-bundle"
+      description  = "[read-only] Symfony Clock Bundle"
+      homepage_url = "https://docs.sonsofphp.com/components/clock"
+      topics       = ["sonsofphp", "sons-of-php", "php", "symfony", "symfony-bundle", "clock"]
+    },
+    cqrs_bundle = {
+      name         = "cqrs-bundle"
+      description  = "[read-only] Symfony CQRS Bundle"
+      homepage_url = "https://docs.sonsofphp.com/components/cqrs"
+      topics       = ["sonsofphp", "sons-of-php", "cqrs", "php", "symfony", "symfony-bundle"]
+    },
+    feature_toggle_bundle = {
+      name         = "feature-toggle-bundle"
+      description  = "[read-only] Symfony Feature Toggle Bundle"
+      homepage_url = "https://docs.sonsofphp.com/components/feature-toggle"
+      topics       = ["sonsofphp", "sons-of-php", "php", "symfony", "symfony-bundle", "feature-toggle"]
+    },
+    money_bundle = {
+      name         = "money-bundle"
+      description  = "[read-only] Symfony Money Bundle"
+      homepage_url = "https://docs.sonsofphp.com/components/money"
+      topics       = ["sonsofphp", "sons-of-php", "php", "symfony", "symfony-bundle", "money"]
+    },
+    pager_bundle = {
+      name         = "pager-bundle"
+      description  = "[read-only] Symfony Pager Bundle"
+      homepage_url = "https://docs.sonsofphp.com/components/pager"
+      topics       = ["sonsofphp", "sons-of-php", "php", "symfony", "symfony-bundle", "pager"]
+    },
+    # Components
+    attribute = {
+      name         = "attribute"
+      description  = "[read-only] Attribute component"
+      homepage_url = "https://docs.sonsofphp.com/components/attribute"
+      topics       = ["sonsofphp", "sons-of-php", "php", "attribute"]
+    },
+    cache = {
+      name         = "cache"
+      description  = "[read-only] Cache component"
+      homepage_url = "https://docs.sonsofphp.com/components/cache"
+      topics       = ["sonsofphp", "sons-of-php", "php", "psr-6", "psr-16", "cache", "simple-cache", "cache-implementation"]
+    },
+    clock = {
+      name         = "clock"
+      description  = "[read-only] Lightweight clock implementation to abstract away using PHP's DateTime objects"
+      homepage_url = "https://docs.sonsofphp.com/components/clock"
+      topics       = ["sonsofphp", "sons-of-php", "clock", "date", "datetime", "php", "php-clock", "php-library", "psr-20", "time"]
+    },
+    container = {
+      name         = "container"
+      description  = "[read-only] Container Component (PSR-11)"
+      homepage_url = "https://docs.sonsofphp.com/components/container"
+      topics       = ["sonsofphp", "sons-of-php", "php", "container", "psr-11", "psr11"]
+    },
+    cookie = {
+      name         = "cookie"
+      description  = "[read-only] Cookie Component"
+      homepage_url = "https://docs.sonsofphp.com/components/cookie"
+      topics       = ["sonsofphp", "sons-of-php", "php", "cookie"]
+    },
+    cqrs = {
+      name         = "cqrs"
+      description  = "[read-only] CQRS to help get you up and running quickly"
+      homepage_url = "https://docs.sonsofphp.com/components/cqrs"
+      topics       = ["sonsofphp", "sons-of-php", "command-query-response-segregation", "cqrs", "php", "php-cqrs"]
+    },
+    event_dispatcher = {
+      name         = "event-dispatcher"
+      description  = "[read-only] Event Dispatcher Component"
+      homepage_url = "https://docs.sonsofphp.com/components/event-dispatcher"
+      topics       = ["sonsofphp", "sons-of-php", "event-dispatcher", "php", "php-library", "psr-14"]
+    },
+    event_sourcing = {
+      name         = "event-sourcing"
+      description  = "[read-only] event sourcing component"
+      homepage_url = "https://docs.sonsofphp.com/components/event-sourcing"
+      topics       = ["sonsofphp", "sons-of-php", "event-sourcing", "event-store", "php", "php-event-sourcing", "php-library"]
+    },
+    event_sourcing_doctrine = {
+      name         = "event-sourcing-doctrine"
+      description  = "[read-only] Provides additional functionality to sonsofphp/event-sourcing package"
+      homepage_url = "https://docs.sonsofphp.com/components/event-sourcing"
+      topics       = ["sonsofphp", "sons-of-php", "doctrine-dbal", "doctrine-orm", "event-sourcing", "php"]
+    },
+    feature_toggle = {
+      name         = "feature-toggle"
+      description  = "[read-only] Feature Toggles for PHP"
+      homepage_url = "https://docs.sonsofphp.com/components/feature-toggle"
+      topics       = ["sonsofphp", "sons-of-php", "feature-flags", "feature-toggles", "php", "php-library", "toggles"]
+    },
+    filesystem = {
+      name         = "filesystem"
+      description  = "[read-only] Abstract Filesystem that can be used with various services"
+      homepage_url = "https://docs.sonsofphp.com/components/filesystem"
+      topics       = ["sonsofphp", "sons-of-php", "php", "php-library", "filesystem", "virtual-filesystem"]
+    },
+    gateway = {
+      name         = "gateway"
+      description  = "[read-only] Gateway"
+      homepage_url = "https://docs.sonsofphp.com/components/gateway"
+      topics       = ["sonsofphp", "sons-of-php", "php", "php-library", "gateway", "payment-processing"]
+    },
+    http_client = {
+      name         = "http-client"
+      description  = "[read-only] http-client component"
+      homepage_url = "https://docs.sonsofphp.com/components/http-client"
+      topics       = ["sonsofphp", "sons-of-php", "php", "php-library", "psr-18", "http-client"]
+    },
+    http_factory = {
+      name         = "http-factory"
+      description  = "[read-only] http-factory component"
+      homepage_url = "https://docs.sonsofphp.com/components/http-factory"
+      topics       = ["sonsofphp", "sons-of-php", "php", "php-library", "psr-17", "http-factory"]
+    },
+    http-handler = {
+      name         = "http-handler"
+      description  = "[read-only] HttpHandler component"
+      homepage_url = "https://docs.sonsofphp.com/components/http-handler"
+      topics       = ["sonsofphp", "sons-of-php", "php", "psr-15", "http-handler"]
+    },
+    http_message = {
+      name         = "http-message"
+      description  = "[read-only] http-message component"
+      homepage_url = "https://docs.sonsofphp.com/components/http-message"
+      topics       = ["sonsofphp", "sons-of-php", "php", "php-library", "psr-7", "http-message"]
+    },
+    json = {
+      name         = "json"
+      description  = "[read-only] Provides json wrapper"
+      homepage_url = "https://docs.sonsofphp.com/components/json"
+      topics       = ["sonsofphp", "sons-of-php", "php", "json", "json-decoder", "json-encoder"]
+    },
+    link = {
+      name         = "link"
+      description  = "[read-only] Link Component (PSR-13)"
+      homepage_url = "https://docs.sonsofphp.com/components/link"
+      topics       = ["sonsofphp", "sons-of-php", "php", "psr-13"]
+    },
+    logger = {
+      name         = "logger"
+      description  = "[read-only] PHP Logger (PSR-3 Compatible)"
+      homepage_url = "https://docs.sonsofphp.com/components/logger"
+      topics       = ["sonsofphp", "sons-of-php", "php", "psr-3", "logger"]
+    },
+    mailer = {
+      name         = "mailer"
+      description  = "[read-only] Mailer Component"
+      homepage_url = "https://docs.sonsofphp.com/components/mailer"
+      topics       = ["sonsofphp", "sons-of-php", "php", "mailer"]
+    },
+    money = {
+      name         = "money"
+      description  = "[read-only] Use when dealing with Money in PHP"
+      homepage_url = "https://docs.sonsofphp.com/components/money"
+      topics       = ["sonsofphp", "sons-of-php", "currencies", "currency", "iso-4217", "library", "monetary", "money", "php", "php-money"]
+    },
+    pager = {
+      name         = "pager"
+      description  = "[read-only] Pager Component"
+      homepage_url = "https://docs.sonsofphp.com/components/pager"
+      topics       = ["sonsofphp", "sons-of-php", "php", "php-pager", "pager", "pagination"]
+    },
+    router = {
+      name         = "router"
+      description  = "[read-only] Router Component"
+      homepage_url = "https://docs.sonsofphp.com/components/router"
+      topics       = ["sonsofphp", "sons-of-php", "php", "router"]
+    },
+    search = {
+      name         = "search"
+      description  = "[read-only] Search Component"
+      homepage_url = "https://docs.sonsofphp.com/components/search"
+      topics       = ["sonsofphp", "sons-of-php", "php", "php-search"]
+    },
+    session = {
+      name         = "session"
+      description  = "[read-only] Session Component"
+      homepage_url = "https://docs.sonsofphp.com/components/session"
+      topics       = ["sonsofphp", "sons-of-php", "php", "session"]
+    },
+    user-agent = {
+      name         = "user-agent"
+      description  = "[read-only] User Agent"
+      homepage_url = "https://docs.sonsofphp.com/components/user-agent"
+      topics       = ["sonsofphp", "sons-of-php", "php", "useragent", "user-agent"]
+    },
+    validator = {
+      name         = "validator"
+      description  = "[read-only] Validator"
+      homepage_url = "https://docs.sonsofphp.com/components/validator"
+      topics       = ["sonsofphp", "sons-of-php", "php", "validator"]
+    },
+    version = {
+      name         = "version"
+      description  = "[read-only] Compare and manage versions using the semver standard"
+      homepage_url = "https://docs.sonsofphp.com/components/version"
+      topics       = ["sonsofphp", "sons-of-php", "php", "semver", "version", "version-parser"]
+    },
+
     # Contracts
     attribute-contract = {
       name         = "attribute-contract"
@@ -133,217 +383,6 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/contracts/version"
       topics       = ["sonsofphp", "sons-of-php", "php", "version"]
     },
-    # Components
-    attribute = {
-      name         = "attribute"
-      description  = "[read-only] Attribute component"
-      homepage_url = "https://docs.sonsofphp.com/components/attribute"
-      topics       = ["sonsofphp", "sons-of-php", "php", "attribute"]
-    },
-    cache = {
-      name         = "cache"
-      description  = "[read-only] Cache component"
-      homepage_url = "https://docs.sonsofphp.com/components/cache"
-      topics       = ["sonsofphp", "sons-of-php", "php", "psr-6", "psr-16", "cache", "simple-cache", "cache-implementation"]
-    },
-    clock = {
-      name         = "clock"
-      description  = "[read-only] Lightweight clock implementation to abstract away using PHP's DateTime objects"
-      homepage_url = "https://docs.sonsofphp.com/components/clock"
-      topics       = ["sonsofphp", "sons-of-php", "clock", "date", "datetime", "php", "php-clock", "php-library", "psr-20", "time"]
-    },
-    container = {
-      name         = "container"
-      description  = "[read-only] Container Component (PSR-11)"
-      homepage_url = "https://docs.sonsofphp.com/components/container"
-      topics       = ["sonsofphp", "sons-of-php", "php", "container", "psr-11", "psr11"]
-    },
-    cookie = {
-      name         = "cookie"
-      description  = "[read-only] Cookie Component"
-      homepage_url = "https://docs.sonsofphp.com/components/cookie"
-      topics       = ["sonsofphp", "sons-of-php", "php", "cookie"]
-    },
-    cqrs = {
-      name         = "cqrs"
-      description  = "[read-only] CQRS to help get you up and running quickly"
-      homepage_url = "https://docs.sonsofphp.com/components/cqrs"
-      topics       = ["sonsofphp", "sons-of-php", "command-query-response-segregation", "cqrs", "php", "php-cqrs"]
-    },
-    cqrs_bundle = {
-      name         = "cqrs-bundle"
-      description  = "[read-only] Symfony CQRS Bundle"
-      homepage_url = "https://docs.sonsofphp.com/components/cqrs"
-      topics       = ["sonsofphp", "sons-of-php", "cqrs", "php", "symfony", "symfony-bundle"]
-    },
-    cqrs_symfony = {
-      name         = "cqrs-symfony"
-      description  = "[read-only] Adds additional functionality to the sonsofphp/cqrs package"
-      homepage_url = "https://docs.sonsofphp.com/components/cqrs"
-      topics       = ["sonsofphp", "sons-of-php", "bridge", "cqrs", "php", "symfony"]
-    },
-    event_dispatcher = {
-      name         = "event-dispatcher"
-      description  = "[read-only] Event Dispatcher Component"
-      homepage_url = "https://docs.sonsofphp.com/components/event-dispatcher"
-      topics       = ["sonsofphp", "sons-of-php", "event-dispatcher", "php", "php-library", "psr-14"]
-    },
-    event_sourcing = {
-      name         = "event-sourcing"
-      description  = "[read-only] event sourcing component"
-      homepage_url = "https://docs.sonsofphp.com/components/event-sourcing"
-      topics       = ["sonsofphp", "sons-of-php", "event-sourcing", "event-store", "php", "php-event-sourcing", "php-library"]
-    },
-    event_sourcing_doctrine = {
-      name         = "event-sourcing-doctrine"
-      description  = "[read-only] Provides additional functionality to sonsofphp/event-sourcing package"
-      homepage_url = "https://docs.sonsofphp.com/components/event-sourcing"
-      topics       = ["sonsofphp", "sons-of-php", "doctrine-dbal", "doctrine-orm", "event-sourcing", "php"]
-    },
-    event_sourcing_symfony = {
-      name         = "event-sourcing-symfony"
-      description  = "[read-only] Provides additional functionality to sonsofphp/event-sourcing package"
-      homepage_url = "https://docs.sonsofphp.com/components/event-sourcing"
-      topics       = ["sonsofphp", "sons-of-php", "event-bus", "event-sourcing", "php", "symfony"]
-    },
-    feature_toggle = {
-      name         = "feature-toggle"
-      description  = "[read-only] Feature Toggles for PHP"
-      homepage_url = "https://docs.sonsofphp.com/components/feature-toggle"
-      topics       = ["sonsofphp", "sons-of-php", "feature-flags", "feature-toggles", "php", "php-library", "toggles"]
-    },
-    filesystem = {
-      name         = "filesystem"
-      description  = "[read-only] Abstract Filesystem that can be used with various services"
-      homepage_url = "https://docs.sonsofphp.com/components/filesystem"
-      topics       = ["sonsofphp", "sons-of-php", "php", "php-library", "filesystem", "virtual-filesystem"]
-    },
-    gateway = {
-      name         = "gateway"
-      description  = "[read-only] Gateway"
-      homepage_url = "https://docs.sonsofphp.com/components/gateway"
-      topics       = ["sonsofphp", "sons-of-php", "php", "php-library", "gateway", "payment-processing"]
-    },
-    http_client = {
-      name         = "http-client"
-      description  = "[read-only] http-client component"
-      homepage_url = "https://docs.sonsofphp.com/components/http-client"
-      topics       = ["sonsofphp", "sons-of-php", "php", "php-library", "psr-18", "http-client"]
-    },
-    http_factory = {
-      name         = "http-factory"
-      description  = "[read-only] http-factory component"
-      homepage_url = "https://docs.sonsofphp.com/components/http-factory"
-      topics       = ["sonsofphp", "sons-of-php", "php", "php-library", "psr-17", "http-factory"]
-    },
-    http-handler = {
-      name         = "http-handler"
-      description  = "[read-only] HttpHandler component"
-      homepage_url = "https://docs.sonsofphp.com/components/http-handler"
-      topics       = ["sonsofphp", "sons-of-php", "php", "psr-15", "http-handler"]
-    },
-    http_message = {
-      name         = "http-message"
-      description  = "[read-only] http-message component"
-      homepage_url = "https://docs.sonsofphp.com/components/http-message"
-      topics       = ["sonsofphp", "sons-of-php", "php", "php-library", "psr-7", "http-message"]
-    },
-    json = {
-      name         = "json"
-      description  = "[read-only] Provides json wrapper"
-      homepage_url = "https://docs.sonsofphp.com/components/json"
-      topics       = ["sonsofphp", "sons-of-php", "php", "json", "json-decoder", "json-encoder"]
-    },
-    link = {
-      name         = "link"
-      description  = "[read-only] Link Component (PSR-13)"
-      homepage_url = "https://docs.sonsofphp.com/components/link"
-      topics       = ["sonsofphp", "sons-of-php", "php", "psr-13"]
-    },
-    logger = {
-      name         = "logger"
-      description  = "[read-only] PHP Logger (PSR-3 Compatible)"
-      homepage_url = "https://docs.sonsofphp.com/components/logger"
-      topics       = ["sonsofphp", "sons-of-php", "php", "psr-3", "logger"]
-    },
-    mailer = {
-      name         = "mailer"
-      description  = "[read-only] Mailer Component"
-      homepage_url = "https://docs.sonsofphp.com/components/mailer"
-      topics       = ["sonsofphp", "sons-of-php", "php", "mailer"]
-    },
-    money = {
-      name         = "money"
-      description  = "[read-only] Use when dealing with Money in PHP"
-      homepage_url = "https://docs.sonsofphp.com/components/money"
-      topics       = ["sonsofphp", "sons-of-php", "currencies", "currency", "iso-4217", "library", "monetary", "money", "php", "php-money"]
-    },
-    money_twig = {
-      name         = "money-twig"
-      description  = "[read-only] Use when dealing with Money in PHP and Twig"
-      homepage_url = "https://docs.sonsofphp.com/components/money"
-      topics       = ["sonsofphp", "sons-of-php", "currencies", "currency", "iso-4217", "library", "monetary", "money", "php", "php-money", "twig"]
-    },
-    pager = {
-      name         = "pager"
-      description  = "[read-only] Pager Component"
-      homepage_url = "https://docs.sonsofphp.com/components/pager"
-      topics       = ["sonsofphp", "sons-of-php", "php", "php-pager", "pager", "pagination"]
-    },
-    pager-doctrine-collections = {
-      name         = "pager-doctrine-collections"
-      description  = "[read-only] Pager Component that uses doctrine/common"
-      homepage_url = "https://docs.sonsofphp.com/components/pager"
-      topics       = ["sonsofphp", "sons-of-php", "php", "php-pager", "pager", "pagination"]
-    },
-    pager-doctrine-dbal = {
-      name         = "pager-doctrine-dbal"
-      description  = "[read-only] Pager Component that uses doctrine/dbal"
-      homepage_url = "https://docs.sonsofphp.com/components/pager"
-      topics       = ["sonsofphp", "sons-of-php", "php", "php-pager", "pager", "pagination"]
-    },
-    pager-doctrine-orm = {
-      name         = "pager-doctrine-orm"
-      description  = "[read-only] Pager Component that uses doctrine/orm"
-      homepage_url = "https://docs.sonsofphp.com/components/pager"
-      topics       = ["sonsofphp", "sons-of-php", "php", "php-pager", "pager", "pagination"]
-    },
-    router = {
-      name         = "router"
-      description  = "[read-only] Router Component"
-      homepage_url = "https://docs.sonsofphp.com/components/router"
-      topics       = ["sonsofphp", "sons-of-php", "php", "router"]
-    },
-    search = {
-      name         = "search"
-      description  = "[read-only] Search Component"
-      homepage_url = "https://docs.sonsofphp.com/components/search"
-      topics       = ["sonsofphp", "sons-of-php", "php", "php-search"]
-    },
-    session = {
-      name         = "session"
-      description  = "[read-only] Session Component"
-      homepage_url = "https://docs.sonsofphp.com/components/session"
-      topics       = ["sonsofphp", "sons-of-php", "php", "session"]
-    },
-    user-agent = {
-      name         = "user-agent"
-      description  = "[read-only] User Agent"
-      homepage_url = "https://docs.sonsofphp.com/components/user-agent"
-      topics       = ["sonsofphp", "sons-of-php", "php", "useragent", "user-agent"]
-    },
-    validator = {
-      name         = "validator"
-      description  = "[read-only] Validator"
-      homepage_url = "https://docs.sonsofphp.com/components/validator"
-      topics       = ["sonsofphp", "sons-of-php", "php", "validator"]
-    }
-    version = {
-      name         = "version"
-      description  = "[read-only] Compare and manage versions using the semver standard"
-      homepage_url = "https://docs.sonsofphp.com/components/version"
-      topics       = ["sonsofphp", "sons-of-php", "php", "semver", "version", "version-parser"]
-    }
   }
 }
 
@@ -466,16 +505,6 @@ variable "github_sonsofphp_labels" {
   }
 }
 
-variable "github_admins" {
-  default = ["JoshuaEstes"]
-}
-variable "github_members" {
-  default = []
-}
-variable "github_teams" {
-  default = ["Members"]
-}
-
 terraform {
   cloud {
     organization = "SonsOfPHP"
@@ -508,24 +537,44 @@ provider "github" {
 # Teams
 # @see https://registry.terraform.io/providers/integrations/github/latest/docs/resources/team
 ###
-resource "github_team" "hang_arounds" {
-  name    = "Hang Arounds"
-  privacy = "closed"
-}
+#import {
+#    to = github_team.hang_arounds
+#    id = "Hang Arounds"
+#}
+#resource "github_team" "hang_arounds" {
+#  name    = "Hang Arounds"
+#  privacy = "closed"
+#}
+#import {
+#    to = github_team.prospects
+#    id = "Prospects"
+#}
 resource "github_team" "prospects" {
   name    = "Prospects"
   privacy = "closed"
 }
+#import {
+#    to = github_team.members
+#    id = "Members"
+#}
 resource "github_team" "members" {
   name    = "Members"
   privacy = "closed"
 }
+#import {
+#    to = github_team.security
+#    id = "Security"
+#}
 resource "github_team" "security" {
   name           = "Security"
   description    = "Individuals responsible for the security of all things"
   privacy        = "closed"
   parent_team_id = github_team.members.id
 }
+#import {
+#    to = github_team.terraform
+#    id = "Terraform"
+#}
 resource "github_team" "terraform" {
   name           = "Terraform"
   privacy        = "closed"
@@ -537,6 +586,10 @@ resource "github_team" "terraform" {
 # @see https://registry.terraform.io/providers/integrations/github/latest/docs/resources/repository
 ###
 # Mother Repo
+#import {
+#    to = github_repository.sonsofphp
+#    id = "sonsofphp"
+#}
 resource "github_repository" "sonsofphp" {
   name         = "sonsofphp"
   description  = "Mother Repository - All Development is done here"
@@ -588,6 +641,11 @@ resource "github_repository" "sonsofphp" {
 ###
 # Labels for the Mother Repo
 # @see https://registry.terraform.io/providers/integrations/github/latest/docs/resources/issue_label
+#import {
+#    for_each = var.github_sonsofphp_labels
+#    to       = github_issue_label.sonsofphp[each.key]
+#    id       = each.key
+#}
 resource "github_issue_label" "sonsofphp" {
     for_each    = var.github_sonsofphp_labels
     repository  = "sonsofphp"
@@ -597,6 +655,11 @@ resource "github_issue_label" "sonsofphp" {
 }
 
 # Read Only Repositories for projects
+#import {
+#    for_each = var.github_readonly_repos
+#    to       = github_repository.readonly[each.key]
+#    id       = each.value.name
+#}
 resource "github_repository" "readonly" {
   for_each      = var.github_readonly_repos
   name          = each.value.name
@@ -611,24 +674,24 @@ resource "github_repository" "readonly" {
 }
 
 # Additional Repositories
-resource "github_repository" "symfony_sop" {
-  name                   = "symfony-sop"
-  description            = "Symfony Template Repository for base projects"
-  homepage_url           = "https://docs.sonsofphp.com"
-  visibility             = "public"
-  has_issues             = true
-  has_projects           = false
-  has_wiki               = false
-  has_downloads          = false
-  is_template            = true
-  vulnerability_alerts   = true
-  allow_auto_merge       = true
-  delete_branch_on_merge = true
-  topics = [
-    "domain-driven-design",
-    "hacktoberfest",
-    "hexagonal-architecture",
-    "symfony",
-    "template",
-  ]
-}
+#resource "github_repository" "symfony_sop" {
+#  name                   = "symfony-sop"
+#  description            = "Symfony Template Repository for base projects"
+#  homepage_url           = "https://docs.sonsofphp.com"
+#  visibility             = "public"
+#  has_issues             = true
+#  has_projects           = false
+#  has_wiki               = false
+#  has_downloads          = false
+#  is_template            = true
+#  vulnerability_alerts   = true
+#  allow_auto_merge       = true
+#  delete_branch_on_merge = true
+#  topics = [
+#    "domain-driven-design",
+#    "hacktoberfest",
+#    "hexagonal-architecture",
+#    "symfony",
+#    "template",
+#  ]
+#}
