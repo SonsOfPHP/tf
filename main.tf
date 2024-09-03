@@ -249,6 +249,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/components/session"
       topics       = ["sonsofphp", "sons-of-php", "php", "session"]
     },
+    state-machine = {
+      name         = "state-machine"
+      description  = "[read-only] State Machine Component"
+      homepage_url = "https://docs.sonsofphp.com/components/state-machine"
+      topics       = ["sonsofphp", "sons-of-php", "php", "state-machine"]
+    },
     user-agent = {
       name         = "user-agent"
       description  = "[read-only] User Agent"
@@ -267,7 +273,6 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/components/version"
       topics       = ["sonsofphp", "sons-of-php", "php", "semver", "version", "version-parser"]
     },
-
     # Contracts
     attribute-contract = {
       name         = "attribute-contract"
@@ -364,6 +369,12 @@ variable "github_readonly_repos" {
       description  = "[read-only] Session Contact"
       homepage_url = "https://docs.sonsofphp.com/contracts/session"
       topics       = ["sonsofphp", "sons-of-php", "php", "session"]
+    },
+    state-machine-contract = {
+      name         = "state-machine-contract"
+      description  = "[read-only] State Machine Contact"
+      homepage_url = "https://docs.sonsofphp.com/contracts/state-machine"
+      topics       = ["sonsofphp", "sons-of-php", "php", "state-machine"]
     },
     user-agent-contract = {
       name         = "user-agent-contract"
