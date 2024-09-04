@@ -99,6 +99,12 @@ variable "github_readonly_repos" {
       topics       = ["sonsofphp", "sons-of-php", "php", "symfony", "symfony-bundle", "pager"]
     },
     # Components
+    assert = {
+      name         = "assert"
+      description  = "[read-only] Assert component"
+      homepage_url = "https://docs.sonsofphp.com/components/assert"
+      topics       = ["sonsofphp", "sons-of-php", "php", "assert"]
+    },
     attribute = {
       name         = "attribute"
       description  = "[read-only] Attribute component"
