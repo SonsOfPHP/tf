@@ -18,6 +18,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/bard"
       topics       = ["sonsofphp", "sons-of-php", "bard-php", "monorepo", "php", "php8"]
     },
+    prospect = {
+      name         = "prospect"
+      description  = "[read-only] PHP Framework"
+      homepage_url = "https://docs.sonsofphp.com/prospect"
+      topics       = ["sonsofphp", "sons-of-php", "php", "framework"]
+    },
     # Bridges
     cqrs_symfony = {
       name         = "cqrs-symfony"
@@ -66,6 +72,12 @@ variable "github_readonly_repos" {
       description  = "[read-only] Pager Component that uses doctrine/orm"
       homepage_url = "https://docs.sonsofphp.com/components/pager"
       topics       = ["sonsofphp", "sons-of-php", "php", "php-pager", "pager", "pagination"]
+    },
+    pager-twig = {
+      name         = "pager-twig"
+      description  = "[read-only] Adds support for twig"
+      homepage_url = "https://docs.sonsofphp.com/components/pager"
+      topics       = ["sonsofphp", "sons-of-php", "php", "php-pager", "pager", "pagination", "twig"]
     },
     # Bundles
     clock_bundle = {
@@ -237,6 +249,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/components/pager"
       topics       = ["sonsofphp", "sons-of-php", "php", "php-pager", "pager", "pagination"]
     },
+    registry = {
+      name         = "registry"
+      description  = "[read-only] Registry Component"
+      homepage_url = "https://docs.sonsofphp.com/components/registry"
+      topics       = ["sonsofphp", "sons-of-php", "php", "registry"]
+    },
     router = {
       name         = "router"
       description  = "[read-only] Router Component"
@@ -357,6 +375,12 @@ variable "github_readonly_repos" {
       description  = "[read-only] Pager Contacts"
       homepage_url = "https://docs.sonsofphp.com/contracts/pager"
       topics       = ["sonsofphp", "sons-of-php", "php", "pager", "pagination"]
+    },
+    registry-contract = {
+      name         = "registry-contract"
+      description  = "[read-only] Registry Contacts"
+      homepage_url = "https://docs.sonsofphp.com/contracts/registry"
+      topics       = ["sonsofphp", "sons-of-php", "php", "registry"]
     },
     router-contract = {
       name         = "router-contract"
@@ -612,25 +636,47 @@ resource "github_repository" "sonsofphp" {
   description  = "Mother Repository - All Development is done here"
   homepage_url = "https://docs.sonsofphp.com"
   topics = [
+    "hacktoberfest",
+    "sons-of-php",
+    "sonsofphp",
+    "php",
+    "php-contract",
+    "php-library",
+    "php8",
     "bard-php",
+    "prospect-php",
+    "assert",
+    "cache",
     "clock",
+    "container",
+    "cookie",
     "cqrs",
     "event-dispatcher",
     "event-sourcing",
-    "feature-flags",
-    "hacktoberfest",
+    "feature-toggle",
+    "filesystem",
+    "http-factory",
+    "http-handler",
+    "http-message",
     "json",
+    "link",
+    "logger",
+    "mailer",
     "money",
-    "php",
-    "php-library",
-    "php7",
-    "php8",
+    "pager",
+    "state-machine",
+    "version",
+    "psr-3",
+    "psr-6",
+    "psr-7",
+    "psr-11",
+    "psr-13",
     "psr-14",
+    "psr-15",
+    "psr-16",
+    "psr-17",
+    "psr-18",
     "psr-20",
-    "sons-of-php",
-    "sonsofphp",
-    "ecommerce",
-    "shop",
   ]
   visibility             = "public"
   vulnerability_alerts   = true
