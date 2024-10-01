@@ -279,6 +279,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/components/state-machine"
       topics       = ["sonsofphp", "sons-of-php", "php", "state-machine"]
     },
+    stdlib = {
+      name         = "stdlib"
+      description  = "[read-only] Standard Library"
+      homepage_url = "https://docs.sonsofphp.com/components/stdlib"
+      topics       = ["sonsofphp", "sons-of-php", "php", "stdlib"]
+    },
     user-agent = {
       name         = "user-agent"
       description  = "[read-only] User Agent"
@@ -405,6 +411,12 @@ variable "github_readonly_repos" {
       description  = "[read-only] State Machine Contact"
       homepage_url = "https://docs.sonsofphp.com/contracts/state-machine"
       topics       = ["sonsofphp", "sons-of-php", "php", "state-machine"]
+    },
+    stdlib-contract = {
+      name         = "stdlib-contract"
+      description  = "[read-only] Standard Library Contact"
+      homepage_url = "https://docs.sonsofphp.com/contracts/stdlib"
+      topics       = ["sonsofphp", "sons-of-php", "php", "stdlib"]
     },
     user-agent-contract = {
       name         = "user-agent-contract"
