@@ -249,6 +249,12 @@ variable "github_readonly_repos" {
       homepage_url = "https://docs.sonsofphp.com/components/pager"
       topics       = ["sonsofphp", "sons-of-php", "php", "php-pager", "pager", "pagination"]
     },
+    pay = {
+      name         = "pay"
+      description  = "[read-only] Pay Component | Abstract Payment Gateway"
+      homepage_url = "https://docs.sonsofphp.com/components/pay"
+      topics       = ["sonsofphp", "sons-of-php", "php", "php-payment-gateway", "pay", "payment-gateway"]
+    },
     registry = {
       name         = "registry"
       description  = "[read-only] Registry Component"
@@ -381,6 +387,12 @@ variable "github_readonly_repos" {
       description  = "[read-only] Pager Contacts"
       homepage_url = "https://docs.sonsofphp.com/contracts/pager"
       topics       = ["sonsofphp", "sons-of-php", "php", "pager", "pagination"]
+    },
+    pay-contract = {
+      name         = "pay"
+      description  = "[read-only] Pay Contract | Abstract Payment Gateway"
+      homepage_url = "https://docs.sonsofphp.com/contracts/pay"
+      topics       = ["sonsofphp", "sons-of-php", "php", "php-payment-gateway", "pay", "payment-gateway"]
     },
     registry-contract = {
       name         = "registry-contract"
@@ -529,6 +541,10 @@ variable "github_sonsofphp_labels" {
     },
     Pager = {
       name  = "Pager"
+      color = "5319e7"
+    },
+    Pay = {
+      name  = "pay"
       color = "5319e7"
     },
     Router = {
