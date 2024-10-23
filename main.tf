@@ -835,7 +835,7 @@ resource "github_issue_label" "sonsofphp_contract_label" {
     for_each    = var.github_sonsofphp_contract_labels
     repository  = "sonsofphp"
     name        = each.key
-    color       = "5319e7"
+    color       = "b4a8d1"
     #description = each.value.description
 }
 resource "github_issue_label" "sonsofphp_component_label" {
@@ -849,21 +849,21 @@ resource "github_issue_label" "sonsofphp_bridge_label" {
     for_each    = var.github_sonsofphp_bridge_labels
     repository  = "sonsofphp"
     name        = each.key
-    color       = "5319e7"
+    color       = "d4c5f9"
     #description = each.value.description
 }
 resource "github_issue_label" "sonsofphp_bundle_label" {
     for_each    = var.github_sonsofphp_bundle_labels
     repository  = "sonsofphp"
     name        = each.key
-    color       = "5319e7"
+    color       = "84b6eb"
     #description = each.value.description
 }
 resource "github_issue_label" "sonsofphp_project_label" {
     for_each    = var.github_sonsofphp_project_labels
     repository  = "sonsofphp"
     name        = each.key
-    color       = "5319e7"
+    color       = "bcf5db"
     #description = each.value.description
 }
 
