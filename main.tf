@@ -451,125 +451,241 @@ variable "github_readonly_repos" {
   }
 }
 
-variable "github_sonsofphp_labels" {
+variable "github_sonsofphp_contract_labels" {
   type = map(object({
     name        = string
-    color       = string
+    #color       = string
+    #description = string
+  }))
+  default = {
+    attribute-contract = {
+      name = "attribute-contract"
+    },
+    cookie-contract = {
+      name = "cookie-contract"
+    },
+    cqrs-contract = {
+      name = "cqrs-contract"
+    },
+    event-sourcing-contract = {
+      name = "event-sourcing-contract"
+    },
+    feature-toggle-contract = {
+      name = "feature-toggle-contract"
+    },
+    filesystem-contract = {
+      name = "filesystem-contract"
+    },
+    http-handler-contract = {
+      name = "http-handler-contract"
+    },
+    logger-contract = {
+      name = "logger-contract"
+    },
+    mailer-contract = {
+      name = "mailer-contract"
+    },
+    money-contract = {
+      name = "money-contract"
+    },
+    pager-contract = {
+      name = "pager-contract"
+    },
+    router-contract = {
+      name = "router-contract"
+    },
+    search-contract = {
+      name = "search-contract"
+    },
+    state-machine-contract = {
+      name = "state-machine-contract"
+    },
+    stdlib-contract = {
+      name = "stdlib-contract"
+    },
+    user-agent-contract = {
+      name = "user-agent-contract"
+    },
+    validator-contract = {
+      name = "validator-contract"
+    },
+    version-contract = {
+      name = "version-contract"
+    },
+  }
+}
+variable "github_sonsofphp_component_labels" {
+  type = map(object({
+    name        = string
+    #color       = string
     #description = string
   }))
 
   default = {
-    Attribute = {
-      name  = "Attribute"
-      color = "5319e7"
+    assert = {
+      name = "assert"
     },
-    Cache = {
-      name  = "Cache"
-      color = "5319e7"
+    cache = {
+      name = "cache"
     },
-    Clock = {
-      name  = "Cache"
-      color = "5319e7"
+    clock = {
+      name = "clock"
     },
-    Container = {
-      name  = "Container"
-      color = "5319e7"
+    container = {
+      name = "container"
     },
-    CQRS = {
-      name  = "CQRS"
-      color = "5319e7"
+    cookie = {
+      name = "cookie"
     },
-    Cookie = {
-      name  = "Cookie"
-      color = "5319e7"
+    cqrs = {
+      name = "cqrs"
     },
-    EventDispatcher = {
-      name  = "EventDispatcher"
-      color = "5319e7"
+    event-dispatcher = {
+      name = "event-dispatcher"
     },
-    EventSourcing = {
-      name  = "EventSourcing"
-      color = "5319e7"
+    event-sourcing = {
+      name = "event-sourcing"
     },
-    FeatureToggle = {
-      name  = "FeatureToggle"
-      color = "5319e7"
+    feature-toggle = {
+      name = "feature-toggle"
     },
-    Gateway = {
-      name  = "Gateway"
-      color = "5319e7"
+    filesystem = {
+      name = "filesystem"
     },
-    HttpClient = {
-      name  = "HttpClient"
-      color = "5319e7"
+    http-client = {
+      name = "http-client"
     },
-    HttpFactory = {
-      name  = "HttpFactory"
-      color = "5319e7"
+    http-factory = {
+      name = "http-factory"
     },
-    HttpHandler = {
-      name  = "HttpHandler"
-      color = "5319e7"
+    http-handler = {
+      name = "http-handler"
     },
-    HttpMessage = {
-      name  = "HttpMessage"
-      color = "5319e7"
+    http-message = {
+      name = "http-message"
     },
-    JSON = {
-      name  = "JSON"
-      color = "5319e7"
+    json = {
+      name = "json"
     },
-    Link = {
-      name  = "Link"
-      color = "5319e7"
+    link = {
+      name = "link"
     },
-    Logger = {
-      name  = "Logger"
-      color = "5319e7"
+    logger = {
+      name = "logger"
     },
-    Mailer = {
-      name  = "Mailer"
-      color = "5319e7"
+    mailer = {
+      name = "mailer"
     },
-    MessageBus = {
-      name  = "MessageBus"
-      color = "5319e7"
+    money = {
+      name = "money"
     },
-    Money = {
-      name  = "Money"
-      color = "5319e7"
+    pager = {
+      name = "pager"
     },
-    Pager = {
-      name  = "Pager"
-      color = "5319e7"
+    registry = {
+      name = "registry"
     },
-    Pay = {
-      name  = "pay"
-      color = "5319e7"
+    router = {
+      name = "router"
     },
-    Router = {
-      name  = "Router"
-      color = "5319e7"
+    search = {
+      name = "search"
     },
-    Search = {
-      name  = "Search"
-      color = "5319e7"
+    session = {
+      name = "session"
     },
-    Session = {
-      name  = "Session"
-      color = "5319e7"
+    state-machine = {
+      name = "state-machine"
     },
-    UserAgent = {
-      name  = "UserAgent"
-      color = "5319e7"
+    stdlib = {
+      name = "stdlib"
     },
-    Validator = {
-      name  = "Validator"
-      color = "5319e7"
+    user-agent = {
+      name = "user-agent"
     },
-    Version = {
-      name  = "Version"
-      color = "5319e7"
+    validator = {
+      name = "validator"
+    },
+    version = {
+      name = "version"
+    },
+  }
+}
+variable "github_sonsofphp_bridge_labels" {
+  type = map(object({
+    name        = string
+    #color       = string
+    #description = string
+  }))
+
+  default = {
+    cqrs-symfony = {
+      name = "cqrs-symfony"
+    },
+    event-sourcing-doctrine = {
+      name = "event-sourcing-doctrine"
+    },
+    event-sourcing-symfony = {
+      name = "event-sourcing-symfony"
+    },
+    filesystem-aws = {
+      name = "filesystem-aws"
+    },
+    filesystem-liip-imagine = {
+      name = "filesystem-liip-imagine"
+    },
+    money-twig = {
+      name = "money-twig"
+    },
+    pager-doctrine-collections = {
+      name = "pager-doctrine-collections"
+    },
+    pager-doctrine-dbal = {
+      name = "pager-doctrine-dbal"
+    },
+    pager-doctrine-orm = {
+      name = "pager-doctrine-orm"
+    },
+    pager-twig = {
+      name = "pager-twig"
+    },
+  }
+}
+variable "github_sonsofphp_project_labels" {
+  type = map(object({
+    name        = string
+    #color       = string
+    #description = string
+  }))
+
+  default = {
+    bard = {
+      name = "bard"
+    },
+  }
+}
+variable "github_sonsofphp_bundle_labels" {
+  type = map(object({
+    name        = string
+    #color       = string
+    #description = string
+  }))
+
+  default = {
+    clock-bundle = {
+      name = "clock-bundle"
+    },
+    cqrs-bundle = {
+      name = "cqrs-bundle"
+    },
+    feature-toggle-bundle = {
+      name = "feature-toggle-bundle"
+    },
+    money-bundle = {
+      name = "money-bundle"
+    },
+    pager-bundle = {
+      name = "pager-bundle"
     },
   }
 }
@@ -715,11 +831,39 @@ resource "github_repository" "sonsofphp" {
 #    to       = github_issue_label.sonsofphp[each.key]
 #    id       = each.key
 #}
-resource "github_issue_label" "sonsofphp" {
-    for_each    = var.github_sonsofphp_labels
+resource "github_issue_label" "sonsofphp_contract_label" {
+    for_each    = var.github_sonsofphp_contract_labels
     repository  = "sonsofphp"
     name        = each.key
-    color       = each.value.color
+    color       = "5319e7"
+    #description = each.value.description
+}
+resource "github_issue_label" "sonsofphp_component_label" {
+    for_each    = var.github_sonsofphp_component_labels
+    repository  = "sonsofphp"
+    name        = each.key
+    color       = "5319e7"
+    #description = each.value.description
+}
+resource "github_issue_label" "sonsofphp_bridge_label" {
+    for_each    = var.github_sonsofphp_bridge_labels
+    repository  = "sonsofphp"
+    name        = each.key
+    color       = "5319e7"
+    #description = each.value.description
+}
+resource "github_issue_label" "sonsofphp_bundle_label" {
+    for_each    = var.github_sonsofphp_bundle_labels
+    repository  = "sonsofphp"
+    name        = each.key
+    color       = "5319e7"
+    #description = each.value.description
+}
+resource "github_issue_label" "sonsofphp_project_label" {
+    for_each    = var.github_sonsofphp_project_labels
+    repository  = "sonsofphp"
+    name        = each.key
+    color       = "5319e7"
     #description = each.value.description
 }
 
