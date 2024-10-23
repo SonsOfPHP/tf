@@ -856,7 +856,7 @@ resource "github_issue_label" "sonsofphp_bundle_label" {
     for_each    = var.github_sonsofphp_bundle_labels
     repository  = "sonsofphp"
     name        = each.key
-    color       = "d4c5f9"
+    color       = "84b6eb"
     #description = each.value.description
 }
 resource "github_issue_label" "sonsofphp_project_label" {
